@@ -196,7 +196,12 @@
 
   function setContainerHeight() {
     if (!container) return;
-    // All panels are position:absolute so scrollHeight is measurable regardless of opacity
+    // Mobile uses display:none / position:relative — height is auto, no JS needed
+    if (window.innerWidth < 768) {
+      container.style.height = '';
+      return;
+    }
+    // Desktop: all panels are position:absolute, measure each and lock to tallest
     const saved = panels.map(p => p && p.classList.contains('menu__panel--hidden'));
     panels.forEach(p => { if (p) p.classList.remove('menu__panel--hidden'); });
 

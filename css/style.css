@@ -1245,26 +1245,37 @@ section[id], :target {
   .menu__tab  { flex: none; padding: var(--sp-3) var(--sp-6); }
 }
 
-/* Panels wrapper — height set via JS to the tallest panel */
+/* Panels wrapper */
 .menu__panels {
   position: relative;
 }
 
-/* All panels stack absolutely inside the fixed-height wrapper */
+/* Mobile: simple show/hide — no absolute stacking, height is auto */
 [role="tabpanel"] {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  opacity: 1;
-  pointer-events: auto;
-  transition: opacity 0.3s ease;
+  position: relative;
 }
 
-/* Hidden: invisible only — stays in layout so JS can measure scrollHeight */
 .menu__panel--hidden {
-  opacity: 0;
-  pointer-events: none;
+  display: none;
+}
+
+/* Desktop: all panels stack absolutely, JS measures and locks container height */
+@media (min-width: 768px) {
+  [role="tabpanel"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.3s ease;
+  }
+
+  .menu__panel--hidden {
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
 /* Category heading inside panel */
