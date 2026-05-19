@@ -34,8 +34,12 @@
   <!-- Preload body font (self-hosted) -->
   <link rel="preload" href="fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 
-  <!-- Preload hero image -->
-  <link rel="preload" as="image" href="images/Hero.webp" type="image/webp">
+  <!-- Preload hero image (mobile gets smaller variant) -->
+  <link rel="preload" as="image"
+    href="images/Hero.webp"
+    imagesrcset="images/Hero-mobile.webp 750w, images/Hero.webp 1440w"
+    imagesizes="100vw"
+    type="image/webp">
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
@@ -94,7 +98,7 @@
   <!-- Background texture (parallax via JS) -->
   <picture>
     <source srcset="images/Background1.webp" type="image/webp">
-    <img id="bg-texture" src="images/Background1.png" alt="" aria-hidden="true" class="bg-texture" loading="eager">
+    <img id="bg-texture" src="images/Background1.png" alt="" aria-hidden="true" class="bg-texture" loading="lazy">
   </picture>
 
   <!-- Loading screen -->
@@ -187,8 +191,11 @@
 
       <div class="hero__bg">
         <picture>
-          <source srcset="images/Hero.webp" type="image/webp">
-          <img src="images/Hero.png" alt="" fetchpriority="high" loading="eager" width="1920" height="1080">
+          <source
+            srcset="images/Hero-mobile.webp 750w, images/Hero.webp 1440w"
+            sizes="100vw"
+            type="image/webp">
+          <img src="images/Hero.png" alt="" fetchpriority="high" loading="eager" width="1440" height="810">
         </picture>
         <div class="hero__overlay"></div>
       </div>
