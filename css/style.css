@@ -790,6 +790,10 @@ h1, h2, h3, h4 {
   background-color: var(--charcoal);
 }
 
+.nav__toggle[aria-expanded="true"] {
+  visibility: hidden;
+}
+
 .nav__toggle[aria-expanded="true"] span:nth-child(1) {
   transform: translateY(6.5px) rotate(45deg);
 }
