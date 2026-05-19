@@ -161,14 +161,15 @@
 })();
 
 /* ============================================================
-   MENU TABS — keyboard accessible
+   MENU TABS — keyboard accessible + fixed-height container
    ============================================================ */
 (function () {
-  const tabList = document.querySelector('[role="tablist"]');
+  const tabList   = document.querySelector('[role="tablist"]');
   if (!tabList) return;
 
-  const tabs   = Array.from(tabList.querySelectorAll('[role="tab"]'));
-  const panels = tabs.map(t => document.getElementById(t.getAttribute('aria-controls')));
+  const container = document.querySelector('.menu__panels');
+  const tabs      = Array.from(tabList.querySelectorAll('[role="tab"]'));
+  const panels    = tabs.map(t => document.getElementById(t.getAttribute('aria-controls')));
 
   function activateTab(tab) {
     tabs.forEach(t => {
@@ -184,6 +185,19 @@
 
     const panel = document.getElementById(tab.getAttribute('aria-controls'));
     if (panel) panel.classList.remove('menu__panel--hidden');
+  }
+
+  function setContainerHeight() {
+    if (!container) return;
+    // All panels are position:absolute so scrollHeight is measurable regardless of opacity
+    const saved = panels.map(p => p && p.classList.contains('menu__panel--hidden'));
+    panels.forEach(p => { if (p) p.classList.remove('menu__panel--hidden'); });
+
+    const maxH = panels.reduce((max, p) => p ? Math.max(max, p.scrollHeight) : max, 0);
+
+    panels.forEach((p, i) => { if (p && saved[i]) p.classList.add('menu__panel--hidden'); });
+
+    if (maxH > 0) container.style.height = maxH + 'px';
   }
 
   tabList.addEventListener('click', e => {
@@ -208,6 +222,19 @@
   });
 
   tabs.forEach((t, i) => { if (i !== 0) t.setAttribute('tabindex', '-1'); });
+
+  // Measure on load; recalculate on resize (debounced)
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setContainerHeight);
+  } else {
+    setContainerHeight();
+  }
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(setContainerHeight, 150);
+  }, { passive: true });
 })();
 
 /* ============================================================

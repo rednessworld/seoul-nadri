@@ -1215,27 +1215,26 @@ section[id], :target {
   .menu__tab  { flex: none; padding: var(--sp-3) var(--sp-6); }
 }
 
-/* Panels wrapper — holds all tabpanels stacked; height set by active panel */
+/* Panels wrapper — height set via JS to the tallest panel */
 .menu__panels {
   position: relative;
 }
 
-@media (min-width: 768px) {
-  .menu__panels { min-height: 600px; }
-}
-
-/* All panels: base position */
+/* All panels stack absolutely inside the fixed-height wrapper */
 [role="tabpanel"] {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.3s ease;
 }
 
-/* Hidden panels: lifted out of flow, invisible, non-interactive */
+/* Hidden: invisible only — stays in layout so JS can measure scrollHeight */
 .menu__panel--hidden {
-  position: absolute;
-  inset: 0;
   opacity: 0;
   pointer-events: none;
-  visibility: hidden;
 }
 
 /* Category heading inside panel */
