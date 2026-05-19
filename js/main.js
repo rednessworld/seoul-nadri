@@ -105,11 +105,18 @@
   }
 
   toggle.addEventListener('click', () => {
-    const isOpen = mobileMenu.classList.contains('nav__links-center--open');
-    isOpen ? closeMenu() : openMenu();
+    if (toggle.getAttribute('aria-expanded') === 'true') {
+      closeMenu();
+    } else {
+      openMenu();
+    }
   });
 
-  /* Close when a nav link is tapped */
+  /* Close button inside the overlay */
+  const closeBtn = mobileMenu.querySelector('.nav__close');
+  closeBtn?.addEventListener('click', closeMenu);
+
+  /* Close when any nav link is tapped */
   mobileMenu.addEventListener('click', e => {
     if (e.target.closest('a')) closeMenu();
   });
