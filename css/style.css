@@ -1215,7 +1215,28 @@ section[id], :target {
   .menu__tab  { flex: none; padding: var(--sp-3) var(--sp-6); }
 }
 
-.menu__panel--hidden { display: none; }
+/* Panels wrapper — holds all tabpanels stacked; height set by active panel */
+.menu__panels {
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .menu__panels { min-height: 600px; }
+}
+
+/* All panels: base position */
+[role="tabpanel"] {
+  position: relative;
+}
+
+/* Hidden panels: lifted out of flow, invisible, non-interactive */
+.menu__panel--hidden {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
 
 /* Category heading inside panel */
 .menu__cat-label {
