@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Seoul Nadri | The Art of Traditional Korean Cuisine</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#5e5e5b",
+                    "inverse-on-surface": "#f9efe8",
+                    "primary-container": "#af8c72",
+                    "on-surface": "#1f1b17",
+                    "tertiary-container": "#94938f",
+                    "surface-bright": "#fff8f4",
+                    "on-surface-variant": "#4f453e",
+                    "background": "#fff8f4",
+                    "secondary-fixed": "#ebe1d4",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "primary-fixed": "#ffdcc3",
+                    "on-primary-container": "#3e2713",
+                    "on-secondary-fixed-variant": "#4c463c",
+                    "on-secondary": "#ffffff",
+                    "surface-container-high": "#f1e6df",
+                    "on-secondary-container": "#686257",
+                    "on-tertiary-fixed-variant": "#474744",
+                    "tertiary-fixed-dim": "#c8c6c2",
+                    "on-tertiary-container": "#2c2c29",
+                    "surface-container": "#f6ece5",
+                    "outline-variant": "#d3c4ba",
+                    "secondary": "#645d53",
+                    "on-error-container": "#93000a",
+                    "surface-container-low": "#fcf2ea",
+                    "surface-container-highest": "#ebe1da",
+                    "on-secondary-fixed": "#1f1b13",
+                    "surface-dim": "#e2d8d1",
+                    "tertiary-fixed": "#e4e2dd",
+                    "surface-tint": "#765841",
+                    "error-container": "#ffdad6",
+                    "surface": "#fff8f4",
+                    "on-tertiary-fixed": "#1b1c19",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed-dim": "#e6bfa3",
+                    "secondary-container": "#e8ded1",
+                    "on-error": "#ffffff",
+                    "surface-variant": "#ebe1da",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#352f2b",
+                    "primary": "#765841",
+                    "on-background": "#1f1b17",
+                    "inverse-primary": "#e6bfa3",
+                    "outline": "#81756c",
+                    "on-primary-fixed-variant": "#5c412b",
+                    "secondary-fixed-dim": "#cfc5b9",
+                    "on-primary-fixed": "#2b1705"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "container-padding": "24px",
+                    "gutter": "16px",
+                    "max-width": "1200px",
+                    "section-gap": "80px"
+            },
+            "fontFamily": {
+                    "headline-xl": [
+                            "Newsreader"
+                    ],
+                    "body-md": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "body-lg": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "headline-lg": [
+                            "Newsreader"
+                    ],
+                    "label-sm": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "headline-lg-mobile": [
+                            "Newsreader"
+                    ]
+            },
+            "fontSize": {
+                    "headline-xl": [
+                            "48px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "1.7",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-sm": [
+                            "12px",
+                            {
+                                    "lineHeight": "1.5",
+                                    "letterSpacing": "0.08em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "28px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+        },
+        },
+      }
+    </script>
+<style>
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        /* Subtle noise texture for tactile feel on surfaces */
+        .tactile-surface {
+            background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22 opacity=%220.03%22/%3E%3C/svg%3E');
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopAppBar Shared Component -->
+<header class="fixed top-0 w-full z-50 bg-background/80 dark:bg-background/80 backdrop-blur-md border-b border-outline-variant/30 dark:border-outline-variant/10">
+<div class="flex justify-between items-center max-w-max-width mx-auto px-container-padding h-20">
+<button aria-label="Menu" class="cursor-pointer opacity-90 hover:opacity-100 transition-colors duration-300 hover:text-primary dark:hover:text-inverse-primary text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">restaurant</span>
+</button>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile tracking-widest text-primary dark:text-inverse-primary uppercase">SOUL &amp; SOOT</h1>
+<button class="font-label-sm text-label-sm bg-primary text-on-primary px-4 py-2 rounded shadow-[0_4px_12px_rgba(74,68,63,0.05)] cursor-pointer opacity-90 hover:opacity-100 transition-colors duration-300">Book Now</button>
+</div>
+</header>
+<div class="h-20 w-full shrink-0"></div> <!-- Spacer -->
+<!-- Hero Section -->
+<main class="flex-grow flex flex-col">
+<section class="px-container-padding pt-[60px] pb-section-gap flex flex-col items-center text-center">
+<span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase mb-4 block">Seoul Nadri</span>
+<h2 class="font-headline-xl text-headline-xl text-primary mb-6 max-w-[340px] mx-auto">The Art of Traditional Korean Cuisine</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-[300px] mx-auto mb-10">A slow-living approach to ancestral flavors. Experience the warmth of wood-fired grills and time-honored recipes.</p>
+<div class="relative w-full aspect-[4/5] rounded-xl bg-surface-container overflow-hidden shadow-[0_4px_24px_rgba(74,68,63,0.08)]">
+<img alt="Hero Image" class="object-cover w-full h-full" data-alt="A highly detailed close-up shot of traditional Korean barbecue sizzling on a rustic charcoal grill. The scene is illuminated by warm, soft lighting that highlights the rich textures of the marinated meat and the glowing embers below. The setting evokes a sense of slow living and artisanal quality, with a subtle tactile feel reminiscent of high-end editorial food photography. The color palette features deep clay tones, warm linen whites, and subtle smoke greys, perfectly matching a soft-minimalist aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDthj7UiJ4a7tZp7HerwtWfrRYfsPvpNmOUMQO0zbNxrvltuzaUNtCbRDZOshZL-d_-_yaIkFQ3GXriB1rd2e9uX3fIm3pztKoraG80yTZyj-mqzxdK_R5yt66K8l2DTazipDX0uVsOIMm9ADnWy9chLXxV5FVnKr3Ud7M6R6ozIJojj1VxYMXHIWY8cnYY98MXpM7gOg7XWrzo6cTGsgfe_EOK_ISyCAibV5wniVbxr2CpqFnmAfFGpZAFaPQ25veB9TKfC0ds2QA"/>
+</div>
+</section>
+<!-- Atmosphere & Heritage -->
+<section class="px-container-padding py-section-gap bg-surface-container-low tactile-surface flex flex-col items-center text-center">
+<hr class="w-12 border-t border-secondary mb-10"/>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-6">Atmosphere &amp; Heritage</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-12 max-w-[320px] mx-auto">Inspired by the serenity of traditional hanok architecture, our space is designed for mindful consumption. Soft linens, raw ceramics, and the gentle crackle of the fire create a haven of calm.</p>
+<div class="w-full flex flex-col gap-gutter">
+<div class="w-full aspect-[4/3] rounded-xl bg-surface border border-outline-variant/30 overflow-hidden relative shadow-[0_4px_12px_rgba(74,68,63,0.03)] p-2">
+<img alt="Interior Atmosphere" class="object-cover w-full h-full rounded" data-alt="A serene, minimalist interior shot of a Korean dining room featuring natural wood elements and soft linen drapery. Sunlight gently filters through shoji-style screens, casting warm, diffused shadows across handcrafted ceramic tableware on a smooth oak table. The overall mood is calm, intentional, and high-end, evoking a slow-living lifestyle. The color scheme is dominated by warm bone whites, muted clay accents, and organic tactile textures that invite touch." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1mSl-BDRgcsRlAfZJnHldqqT4UuL3jznlEcFOJAH9y3g4cZkN8Yqe1kzspymLONIceoXKcKwY9bjbaRqAjsLoHZSDIXLQ4UV3qm1RLdUufwBr5op_q4hc-xTzT9_ozZh6fXVhCnv2kPot39eegEKON_5bCowaCwibDMu7U3kIH9cRaARcXlfuiNr2ttsPDJ1QTFD-7JAMF9Pdfc6HtoNfOso6ad_DIy1w7XvHA-IvXMsFxrVcC_s41YFjsjFalWMMsmeLMAp6AVA"/>
+</div>
+</div>
+</section>
+<!-- Menu Grid -->
+<section class="px-container-padding py-section-gap">
+<div class="flex items-center justify-between mb-10 border-b border-outline-variant/30 pb-4">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Curated Offerings</h3>
+<span class="material-symbols-outlined text-secondary text-[28px]">menu_book</span>
+</div>
+<div class="grid grid-cols-1 gap-gutter">
+<!-- Grill Card -->
+<div class="bg-surface p-6 rounded-xl border border-outline-variant/30 shadow-[0_4px_12px_rgba(74,68,63,0.04)] flex flex-col justify-end aspect-[4/3] relative overflow-hidden group">
+<img alt="The Grill" class="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-multiply group-hover:opacity-100 transition-opacity duration-500" data-alt="A sophisticated overhead shot of premium, thick-cut Galbi (Korean short ribs) arranged beautifully on a handcrafted stoneware plate. The meat is marbled perfectly and garnished with delicate micro-herbs. The lighting is soft and airy, typical of high-end light-mode editorial photography. The background is a clean, textured bone-colored surface that emphasizes the rich, deep tones of the marinated beef and the artisanal quality of the presentation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtUcpvPnpZ4TMcgiUapZ5KmR0_YEPJyOLO325ilq7wIBqGTPkBycoxQiZpSuEurmlxwTXzjg46XaKe-Mwn4Us7_uzhSaRpCh6-1_bxAfyDeKayNNHLt6fCqotBWoql-jN321if8FtO4-51ewjd1BgqnXZS-RboSGkh7upvv3sQnNeinL_oJqFjHwf14O_66YFMnLKhDAsMftVKxqQ-l25jYDFjzdZOQ9-xujexcsybVYYVoScjYb8hQQagw07sLB92ozcBhLL36u8"/>
+<div class="z-10 relative bg-background/90 backdrop-blur-sm p-4 rounded-lg inline-block w-max">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-1">Wood-Fired</span>
+<h4 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface m-0 leading-none">The Grill</h4>
+</div>
+</div>
+<!-- Classics & Drinks Row -->
+<div class="grid grid-cols-2 gap-gutter">
+<div class="bg-surface p-6 rounded-xl border border-outline-variant/30 flex flex-col items-center justify-center text-center aspect-square shadow-[0_4px_12px_rgba(74,68,63,0.04)] hover:bg-surface-container transition-colors duration-300">
+<span class="material-symbols-outlined text-primary mb-4 text-[40px] opacity-80">soup_kitchen</span>
+<h4 class="font-body-lg text-body-lg text-on-surface">Classics</h4>
+</div>
+<div class="bg-surface-container p-6 rounded-xl border border-outline-variant/30 flex flex-col items-center justify-center text-center aspect-square shadow-[0_4px_12px_rgba(74,68,63,0.04)] tactile-surface hover:bg-surface-container-high transition-colors duration-300">
+<span class="material-symbols-outlined text-secondary mb-4 text-[40px] opacity-80">local_bar</span>
+<h4 class="font-body-lg text-body-lg text-on-surface">Drinks</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- Reservation Widget -->
+<section class="px-container-padding py-section-gap bg-surface-container tactile-surface text-center border-t border-outline-variant/20">
+<span class="material-symbols-outlined text-primary text-[32px] mb-4 inline-block">calendar_today</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-3">Reserve Your Table</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-10 max-w-[280px] mx-auto">Join us for a slow, intentional dining experience.</p>
+<form class="flex flex-col gap-8 text-left max-w-sm mx-auto bg-surface p-8 rounded-xl border border-outline-variant/30 shadow-[0_8px_24px_rgba(74,68,63,0.06)]">
+<div class="flex flex-col relative group">
+<label class="font-label-sm text-label-sm text-secondary mb-2 uppercase tracking-widest transition-colors group-focus-within:text-primary">Date &amp; Time</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:border-b-2 focus:ring-0 px-0 py-2 font-body-md text-body-md text-on-surface outline-none transition-all" type="datetime-local"/>
+</div>
+<div class="flex flex-col relative group">
+<label class="font-label-sm text-label-sm text-secondary mb-2 uppercase tracking-widest transition-colors group-focus-within:text-primary">Guests</label>
+<select class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:border-b-2 focus:ring-0 px-0 py-2 font-body-md text-body-md text-on-surface outline-none appearance-none transition-all cursor-pointer">
+<option>2 People</option>
+<option>3 People</option>
+<option>4 People</option>
+<option>5+ People</option>
+</select>
+<span class="material-symbols-outlined absolute right-0 bottom-2 text-secondary pointer-events-none">expand_more</span>
+</div>
+<button class="mt-4 w-full bg-primary text-on-primary py-4 rounded shadow-[0_4px_12px_rgba(74,68,63,0.15)] font-label-sm text-label-sm tracking-widest uppercase hover:bg-surface-tint transition-colors duration-300" type="button">Confirm Request</button>
+</form>
+</section>
+</main>
+<!-- Footer Shared Component -->
+<footer class="w-full py-section-gap bg-surface-container-low dark:bg-surface-container-low border-t border-secondary/10">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter max-w-max-width mx-auto px-container-padding text-center md:text-left">
+<div class="flex flex-col gap-6 md:gap-4 items-center md:items-start">
+<h4 class="font-headline-lg-mobile text-headline-lg-mobile text-primary dark:text-inverse-primary mb-2">SOUL &amp; SOOT</h4>
+<div class="flex flex-col gap-4">
+<!-- Mandatory active state applied to Home based on intent -->
+<a class="font-body-md text-body-md text-primary font-medium hover:text-primary transition-colors ease-in-out duration-200" href="#">Home</a>
+<a class="font-body-md text-body-md text-on-secondary-container hover:text-primary transition-colors ease-in-out duration-200" href="#">The Spirit</a>
+<a class="font-body-md text-body-md text-on-secondary-container hover:text-primary transition-colors ease-in-out duration-200" href="#">Menus</a>
+<a class="font-body-md text-body-md text-on-secondary-container hover:text-primary transition-colors ease-in-out duration-200" href="#">Photos</a>
+<a class="font-body-md text-body-md text-on-secondary-container hover:text-primary transition-colors ease-in-out duration-200" href="#">Reservations</a>
+<a class="font-body-md text-body-md text-on-secondary-container hover:text-primary transition-colors ease-in-out duration-200" href="#">Location</a>
+<a class="font-body-md text-body-md text-on-secondary-container hover:text-primary transition-colors ease-in-out duration-200" href="#">Hours</a>
+</div>
+</div>
+<div class="mt-12 md:mt-0 col-span-1 md:col-span-3 pt-8 border-t border-outline-variant/20 flex flex-col items-center">
+<p class="font-body-md text-body-md text-secondary dark:text-secondary-fixed">© 2024 SOUL &amp; SOOT. Crafted with Intention.</p>
+</div>
+</div>
+</footer>
+</body></html>

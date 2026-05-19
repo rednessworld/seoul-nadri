@@ -1,0 +1,86 @@
+/* ============================================================
+   PRINT STYLESHEET — optimised for printing the menu
+   Link: <link rel="stylesheet" media="print" href="css/print.css">
+   Usage: Ctrl/Cmd+P from any page — shows only the full menu.
+   ============================================================ */
+
+@media print {
+  @page { margin: 1.5cm; }
+
+  /* Hide everything except the menu section */
+  .loader, #nav, .skip-nav,
+  .hero, #about, #gallery, #instagram,
+  #reservations, #contact,
+  .footer, .cookie-banner,
+  .whatsapp-btn, .back-to-top,
+  .menu__tabs, .section-label,
+  .nav__lang { display: none !important; }
+
+  body {
+    font-size: 11pt;
+    color: #000;
+    background: #fff;
+  }
+
+  /* Reveal all menu panels for print */
+  .menu__panel--hidden { display: block !important; }
+
+  #menu { padding: 0; background: none; }
+
+  /* Print header */
+  #menu::before {
+    content: 'The Table — Seasonal Menu';
+    display: block;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 22pt;
+    text-align: center;
+    margin-bottom: 20pt;
+    padding-bottom: 10pt;
+    border-bottom: 1pt solid #bbb;
+  }
+
+  /* Category labels via generated content */
+  #tab-starters::before { content: 'Starters'; }
+  #tab-mains::before    { content: 'Mains'; }
+  #tab-desserts::before { content: 'Desserts'; }
+  #tab-drinks::before   { content: 'Drinks'; }
+
+  #tab-starters::before,
+  #tab-mains::before,
+  #tab-desserts::before,
+  #tab-drinks::before {
+    display: block;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 14pt;
+    font-weight: bold;
+    margin: 14pt 0 6pt;
+    padding-bottom: 4pt;
+    border-bottom: 0.5pt solid #ccc;
+  }
+
+  .menu__panel { margin-bottom: 8pt; break-before: auto; }
+
+  .menu__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8pt 16pt;
+  }
+
+  .menu-item {
+    border: none;
+    padding: 6pt 0;
+    border-bottom: 0.5pt solid #e5e5e5;
+    break-inside: avoid;
+    background: none;
+  }
+
+  .menu-item__header { margin-bottom: 2pt; }
+
+  .menu-item__name  { font-size: 11pt; font-family: Georgia, serif; }
+  .menu-item__price { color: #000; font-weight: bold; }
+  .menu-item__desc  { font-size: 9pt; color: #555; }
+
+  h2 { font-size: 0; } /* hide "The Menu" heading — replaced by ::before */
+
+  a { text-decoration: none; color: #000; }
+}

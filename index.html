@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seoul Nadri 서울나들이 — Auténtico Korean BBQ en Barcelona</title>
+  <meta name="description" content="Seoul Nadri es un restaurante coreano auténtico en el Eixample de Barcelona. Parrilla de carbón a la mesa, banchan artesanal y los mejores platos clásicos coreanos. Reserva por WhatsApp.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://seoul-nadri.vercel.app/">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Seoul Nadri 서울나들이 — Auténtico Korean BBQ en Barcelona">
+  <meta property="og:description" content="Parrilla de carbón a la mesa, banchan artesanal y los mejores platos clásicos coreanos. En el Eixample de Barcelona.">
+  <meta property="og:url"         content="https://seoul-nadri.vercel.app/">
+  <meta property="og:image"       content="https://seoul-nadri.vercel.app/images/og-image.jpg">
+  <meta property="og:locale"      content="es_ES">
+  <meta property="og:site_name"   content="Seoul Nadri 서울나들이">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Seoul Nadri — Auténtico Korean BBQ en Barcelona">
+  <meta name="twitter:description" content="Parrilla de carbón, banchan y platos clásicos coreanos en el Eixample.">
+  <meta name="twitter:image"       content="https://seoul-nadri.vercel.app/images/og-image.jpg">
+
+  <!-- Favicon + PWA -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#231F20">
+
+  <!-- Preload heading font -->
+  <link rel="preload" href="fonts/BlackHanSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Preload body font (self-hosted) -->
+  <link rel="preload" href="fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- Preload hero image -->
+  <link rel="preload" as="image" href="images/Hero.webp" type="image/webp">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/print.css" media="print">
+
+  <!-- GA4 Measurement ID (loads only after cookie consent) -->
+  <script>window.GA_MEASUREMENT_ID = 'G-XXXXXXXXXX';</script>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Seoul Nadri 서울나들이",
+    "url": "https://seoul-nadri.vercel.app",
+    "telephone": "+34611895013",
+    "servesCuisine": "Korean",
+    "priceRange": "$$",
+    "image": "https://seoul-nadri.vercel.app/images/og-image.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Carrer de Roger de Llúria, 24",
+      "addressLocality": "Barcelona",
+      "postalCode": "08010",
+      "addressCountry": "ES"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 41.3908578,
+      "longitude": 2.1718725
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "13:00",
+        "closes": "16:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "19:30",
+        "closes": "23:30"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": 4.7,
+      "reviewCount": 4
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Background texture (parallax via JS) -->
+  <picture>
+    <source srcset="images/Background1.webp" type="image/webp">
+    <img id="bg-texture" src="images/Background1.png" alt="" aria-hidden="true" class="bg-texture" loading="eager">
+  </picture>
+
+  <!-- Loading screen -->
+  <div id="loader" class="loader" aria-hidden="true">
+    <span class="loader__name">SEOUL NADRI</span>
+    <span class="loader__korean">서울나들이</span>
+  </div>
+
+  <!-- Skip navigation -->
+  <a href="#main-content" class="skip-nav" data-i18n="a11y.skip">Saltar al contenido</a>
+
+  <!-- ═══════════════════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════════════════ -->
+  <nav id="nav" aria-label="Navegación principal" data-i18n-aria="nav.aria.main">
+    <div class="container">
+      <div class="nav__inner">
+
+        <!-- Logo -->
+        <a href="#hero" class="nav__logo" aria-label="Seoul Nadri — página de inicio" data-i18n-aria="nav.aria.logo">
+          <picture>
+            <source srcset="images/logo.webp" type="image/webp">
+            <img src="images/logo.png" alt="Seoul Nadri" class="nav__logo-img" width="120" height="40" loading="eager">
+          </picture>
+        </a>
+
+        <!-- Desktop center links -->
+        <ul class="nav__links">
+          <li><a href="#about"   class="nav__link" data-i18n="nav.about">Nosotros</a></li>
+          <li><a href="#bbq"     class="nav__link" data-i18n="nav.bbq">Korean BBQ</a></li>
+          <li><a href="#menu"    class="nav__link" data-i18n="nav.menu">Carta</a></li>
+          <li><a href="#gallery" class="nav__link" data-i18n="nav.gallery">Galería</a></li>
+          <li><a href="#reviews" class="nav__link" data-i18n="nav.reviews">Reseñas</a></li>
+          <li><a href="#find-us" class="nav__link" data-i18n="nav.contact">Encuéntranos</a></li>
+        </ul>
+
+        <!-- Right: lang + CTA -->
+        <div class="nav__right">
+          <div class="nav__lang" role="group" aria-label="Selector de idioma" data-i18n-aria="nav.aria.lang">
+            <button class="lang-btn" type="button" data-lang="es" aria-pressed="true">ES</button>
+            <span class="lang-divider" aria-hidden="true">|</span>
+            <button class="lang-btn" type="button" data-lang="ca" aria-pressed="false">CA</button>
+            <span class="lang-divider" aria-hidden="true">|</span>
+            <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+          </div>
+          <a href="#find-us" class="btn btn--gold" data-i18n="nav.reserve">Reservar</a>
+        </div>
+
+        <!-- Hamburger (mobile only) -->
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-mobile"
+                data-i18n-aria="nav.open" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu overlay -->
+    <div id="nav-mobile" class="nav__links-center" role="dialog" aria-modal="true" aria-label="Menú de navegación" aria-hidden="true" data-i18n-aria="nav.aria.mobile">
+      <ul>
+        <li><a href="#about"   class="nav__link" data-i18n="nav.about">Nosotros</a></li>
+        <li><a href="#bbq"     class="nav__link" data-i18n="nav.bbq">Korean BBQ</a></li>
+        <li><a href="#menu"    class="nav__link" data-i18n="nav.menu">Carta</a></li>
+        <li><a href="#gallery" class="nav__link" data-i18n="nav.gallery">Galería</a></li>
+        <li><a href="#reviews" class="nav__link" data-i18n="nav.reviews">Reseñas</a></li>
+        <li><a href="#find-us" class="nav__link" data-i18n="nav.contact">Encuéntranos</a></li>
+      </ul>
+      <div class="nav__mobile-lang" role="group" aria-label="Selector de idioma" data-i18n-aria="nav.aria.lang">
+        <button class="lang-btn" type="button" data-lang="es" aria-pressed="true">ES</button>
+        <span class="lang-divider" aria-hidden="true">|</span>
+        <button class="lang-btn" type="button" data-lang="ca" aria-pressed="false">CA</button>
+        <span class="lang-divider" aria-hidden="true">|</span>
+        <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <div class="nav__mobile-cta">
+        <a href="#find-us" class="btn btn--gold" data-i18n="nav.reserve">Reservar</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- ═══════════════════════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════════════════════ -->
+    <section id="hero">
+      <h1 class="sr-only">Seoul Nadri 서울나들이 — Auténtico Korean BBQ en Barcelona</h1>
+
+      <div class="hero__bg">
+        <picture>
+          <source srcset="images/Hero.webp" type="image/webp">
+          <img src="images/Hero.png" alt="" fetchpriority="high" loading="eager" width="1920" height="1080">
+        </picture>
+        <div class="hero__overlay"></div>
+      </div>
+
+      <div class="hero__content container">
+        <span class="hero__eyebrow" data-i18n="hero.eyebrow">Auténtica cocina coreana · Eixample, Barcelona</span>
+        <h2 class="hero__headline" data-i18n="hero.headline">El arte de la cocina coreana tradicional</h2>
+        <p class="hero__tagline" data-i18n="hero.tagline">Sabores de Seúl en el corazón de Barcelona. Parrilla de carbón, banchan artesanal y la calidez de la tradición coreana.</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         ABOUT
+    ═══════════════════════════════════════════════════════ -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="about__grid">
+
+          <div class="about__text reveal--slide-left">
+            <span class="section-label" data-i18n="about.label">Nuestra Historia</span>
+            <span class="gold-rule"></span>
+            <h2 class="about__heading" data-i18n="about.heading">나들이 — Una excursión a Seúl</h2>
+            <div class="about__body">
+              <p data-i18n="about.p1"><strong>나들이 (nadri)</strong> es una palabra coreana que describe ese placer simple y cotidiano de salir de casa, pasear sin destino fijo y disfrutar del momento. En Seoul Nadri, recreamos ese espíritu en cada mesa: el crepitar del carbón, el banchan compartido y el ritual ancestral de cocinar juntos.</p>
+              <p data-i18n="about.p2">Abrimos nuestras puertas en el Eixample de Barcelona para acercar la gastronomía coreana auténtica a quienes buscan algo más que una cena — una experiencia que transporta.</p>
+              <p data-i18n="about.p3">Con cada visita llega una generosa selección de <strong>banchan</strong> — platos pequeños y variados que la cocina prepara a diario: kimchi casero, namul de espinacas, brotes de soja marinados... La tradición coreana del compartir, en tu mesa.</p>
+            </div>
+          </div>
+
+          <div class="about__img-wrap reveal--slide-right">
+            <picture>
+              <source srcset="images/food2.webp" type="image/webp">
+              <img src="images/food2.jpg" alt="Parrilla de carbón coreana con banchan en Seoul Nadri Barcelona" class="about__img" loading="lazy" decoding="async" width="800" height="1000">
+            </picture>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         BBQ EXPERIENCE
+    ═══════════════════════════════════════════════════════ -->
+    <section id="bbq" class="section section--alt">
+      <div class="container">
+        <div class="bbq__grid">
+
+          <div class="bbq__img-wrap reveal--slide-left">
+            <picture>
+              <source srcset="images/food1.webp" type="image/webp">
+              <img src="images/food1.jpg" alt="Mesa coreana BBQ con finas láminas de carne en la parrilla de carbón, rodeada de banchan, salsas y bolitas de arroz" class="bbq__img" loading="lazy" decoding="async" width="800" height="1000">
+            </picture>
+          </div>
+
+          <div class="bbq__text reveal--slide-right">
+            <span class="section-label" data-i18n="bbq.label">La Experiencia</span>
+            <span class="gold-rule"></span>
+            <h2 class="bbq__heading" data-i18n="bbq.heading">Parrilla de carbón en la mesa</h2>
+            <div class="bbq__body">
+              <p data-i18n="bbq.p1">En el centro de cada mesa, una parrilla de carbón encendida. Las carnes — panceta ibérica, Black Angus bulgogi, pollo marinado con gochujang — se cocinan despacio mientras conversáis. No hay prisa. Aquí el tiempo lo marca el fuego.</p>
+              <p data-i18n="bbq.p2">La cocina coreana BBQ no es solo comida: es la excusa para estar juntos. Cada corte se acompaña de sus salsas, lechugas frescas y banchan para crear los bocados perfectos.</p>
+              <div class="bbq__note">
+                <p data-i18n="bbq.note"><strong>Consejo:</strong> Recomendamos reservar con antelación. Seoul Nadri siempre está lleno y queremos que tengáis el tiempo y el espacio que merecéis.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         MENU
+    ═══════════════════════════════════════════════════════ -->
+    <section id="menu" class="section">
+      <div class="container">
+
+        <div class="menu__header">
+          <span class="section-label reveal" data-i18n="menu.label">La Carta</span>
+          <span class="gold-rule reveal delay-80"></span>
+          <h2 class="menu__heading reveal--heading" data-i18n="menu.heading">Menú Seoul Nadri</h2>
+          <p class="menu__subhead reveal delay-120" data-i18n="menu.subhead">Cocina coreana auténtica · Ingredientes seleccionados · Opciones sin gluten disponibles</p>
+        </div>
+
+        <!-- Tab nav -->
+        <div class="menu__tabs" role="tablist" aria-label="Categorías del menú" data-i18n-aria="menu.aria.tabs">
+          <button class="menu__tab menu__tab--active" type="button" role="tab"
+                  aria-selected="true" aria-controls="panel-bbq" id="tab-bbq"
+                  data-i18n="menu.tab.bbq">Korean BBQ</button>
+          <button class="menu__tab" type="button" role="tab"
+                  aria-selected="false" aria-controls="panel-snack" id="tab-snack"
+                  data-i18n="menu.tab.snack">Korean Snack</button>
+          <button class="menu__tab" type="button" role="tab"
+                  aria-selected="false" aria-controls="panel-rice" id="tab-rice"
+                  data-i18n="menu.tab.rice">Rice &amp; Noodle</button>
+          <button class="menu__tab" type="button" role="tab"
+                  aria-selected="false" aria-controls="panel-soup" id="tab-soup"
+                  data-i18n="menu.tab.soup">Korean Soup</button>
+          <button class="menu__tab" type="button" role="tab"
+                  aria-selected="false" aria-controls="panel-side" id="tab-side"
+                  data-i18n="menu.tab.side">Side &amp; Postre</button>
+          <button class="menu__tab" type="button" role="tab"
+                  aria-selected="false" aria-controls="panel-sul" id="tab-sul"
+                  data-i18n="menu.tab.sul">Korean Sul</button>
+          <button class="menu__tab" type="button" role="tab"
+                  aria-selected="false" aria-controls="panel-wine" id="tab-wine"
+                  data-i18n="menu.tab.wine">Wine</button>
+        </div>
+
+        <!-- Panel: Korean BBQ -->
+        <div id="panel-bbq" role="tabpanel" aria-labelledby="tab-bbq">
+          <p class="menu__cat-label" data-i18n="menu.cat.bbq">Korean BBQ · 돼지고기</p>
+          <div class="menu__grid stagger-group">
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name" data-i18n="menu.bbq.depe.name">Depe Samgyeopsal</h3>
+                <span class="menu-item__korean" data-i18n="menu.bbq.depe.kr">대패삼겹살</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.bbq.depe.desc">Panceta corte fino a la parrilla de carbón</p>
+              <span class="menu-item__price">16.0€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name" data-i18n="menu.bbq.iberico.name">Iberico Moksal</h3>
+                <span class="menu-item__korean" data-i18n="menu.bbq.iberico.kr">이베리코 목살</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.bbq.iberico.desc">Aguja ibérica a la parrilla de carbón</p>
+              <span class="menu-item__price">19.0€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name" data-i18n="menu.bbq.yangnum.name">Yangnum Kalbi</h3>
+                <span class="menu-item__korean" data-i18n="menu.bbq.yangnum.kr">갈비양념 목살구이</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.bbq.yangnum.desc">Cerdo marinado en salsa kalbi</p>
+              <span class="menu-item__price">17.0€</span>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- Panel: Korean Snack -->
+        <div id="panel-snack" role="tabpanel" aria-labelledby="tab-snack" class="menu__panel--hidden">
+          <p class="menu__cat-label" data-i18n="menu.cat.snack">Korean Snack</p>
+          <div class="menu__grid stagger-group">
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name" data-i18n="menu.snk.kimchi.name">Kimchi Casero</h3>
+                <span class="menu-item__korean" data-i18n="menu.snk.kimchi.kr">직집담근김치</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.snk.kimchi.desc">Kimchi elaborado en Seoul Nadri</p>
+              <span class="menu-item__price">5.5€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name" data-i18n="menu.snk.mandu.name">Bibim Mandu</h3>
+                <span class="menu-item__korean" data-i18n="menu.snk.mandu.kr">비빔만두</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.snk.mandu.desc">Empanadillas de verduras con ensalada (6 unidades)</p>
+              <span class="menu-item__price">9.5€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name" data-i18n="menu.snk.japchae.name">Japchae</h3>
+                <span class="menu-item__korean" data-i18n="menu.snk.japchae.kr">잡채</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.snk.japchae.desc">Fideo de boniato salteado con ternera y verdura · opción vegetariana</p>
+              <span class="menu-item__price">12.0€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name" data-i18n="menu.snk.tteok.name">Tteokbokki</h3>
+                <span class="menu-item__korean" data-i18n="menu.snk.tteok.kr">떡볶이</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.snk.tteok.desc">Pastel de arroz en salsa picante coreana</p>
+              <span class="menu-item__price">12.5€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name" data-i18n="menu.snk.chicken.name">Yangnum Chicken</h3>
+                <span class="menu-item__korean" data-i18n="menu.snk.chicken.kr">양념치킨</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.snk.chicken.desc">Pollo frito coreano</p>
+              <span class="menu-item__price">13.5€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name" data-i18n="menu.snk.kimchijeon.name">Kimchijeon</h3>
+                <span class="menu-item__korean" data-i18n="menu.snk.kimchijeon.kr">김치전</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.snk.kimchijeon.desc">Pancake de kimchi</p>
+              <span class="menu-item__price">10.5€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name" data-i18n="menu.snk.haemul.name">Haemul Yachejeon</h3>
+                <span class="menu-item__korean" data-i18n="menu.snk.haemul.kr">해물 야채전</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.snk.haemul.desc">Pancake de marisco y verdura</p>
+              <span class="menu-item__price">13.5€</span>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- Panel: Rice & Noodle -->
+        <div id="panel-rice" role="tabpanel" aria-labelledby="tab-rice" class="menu__panel--hidden">
+          <p class="menu__cat-label" data-i18n="menu.cat.rice">밥과 국수 · Rice &amp; Noodle</p>
+          <div class="menu__grid stagger-group">
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name" data-i18n="menu.rice.bibimbap.name">Tukbegi Bibimbap</h3>
+                <span class="menu-item__korean" data-i18n="menu.rice.bibimbap.kr">뚝배기 비빔밥</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.rice.bibimbap.desc">Arroz con carne y verduras en olla caliente, huevo frito y gochujang</p>
+              <span class="menu-item__price">14.9€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name" data-i18n="menu.rice.bibimbap_v.name">Tukbegi Bibimbap Vegano</h3>
+                <span class="menu-item__korean" data-i18n="menu.rice.bibimbap_v.kr">야채 뚝배기 비빔밥</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.rice.bibimbap_v.desc">Arroz con verduras en olla caliente, huevo frito y gochujang</p>
+              <span class="menu-item__price">14.9€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name" data-i18n="menu.rice.bokkumbap.name">Bokkumbap</h3>
+                <span class="menu-item__korean" data-i18n="menu.rice.bokkumbap.kr">고깃집 볶음밥</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.rice.bokkumbap.desc">Arroz salteado con kimchi y cerdo</p>
+              <span class="menu-item__price">11.5€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name" data-i18n="menu.rice.chadol.name">Chadol Ramen</h3>
+                <span class="menu-item__korean" data-i18n="menu.rice.chadol.kr">차돌 파채라면</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.rice.chadol.desc">Ramen picante coreano con ternera chadol y cebolleta</p>
+              <span class="menu-item__price">12.9€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name" data-i18n="menu.rice.kimchimari.name">Kimchimari Guksu</h3>
+                <span class="menu-item__korean" data-i18n="menu.rice.kimchimari.kr">김치말이국수</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.rice.kimchimari.desc">Fideo frío en jugo de Baeckkimchi</p>
+              <span class="menu-item__price">13.0€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name" data-i18n="menu.rice.bibimguksu.name">Bibim Guksu</h3>
+                <span class="menu-item__korean" data-i18n="menu.rice.bibimguksu.kr">비빔국수</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.rice.bibimguksu.desc">Fideo frío con salsa picante, ensalada y huevo cocido</p>
+              <span class="menu-item__price">13.0€</span>
+            </article>
+
+            <p class="menu__panel-note" data-i18n="menu.rice.note">BIBIMBAP incluye banchan · 비빔밥은 반찬 포함입니다</p>
+
+          </div>
+        </div>
+
+        <!-- Panel: Korean Soup -->
+        <div id="panel-soup" role="tabpanel" aria-labelledby="tab-soup" class="menu__panel--hidden">
+          <p class="menu__cat-label" data-i18n="menu.cat.soup">찌개 · Korean Soup</p>
+          <div class="menu__grid stagger-group">
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name" data-i18n="menu.soup.doenjang.name">Doenjang Jjigae</h3>
+                <span class="menu-item__korean" data-i18n="menu.soup.doenjang.kr">된장찌개</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.soup.doenjang.desc">Sopa de pasta de soja fermentada con tofu y verduras</p>
+              <span class="menu-item__price">14.9€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name" data-i18n="menu.soup.kimchi.name">Kimchi Jjigae</h3>
+                <span class="menu-item__korean" data-i18n="menu.soup.kimchi.kr">김치찌개</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.soup.kimchi.desc">Sopa de kimchi con tofu y cerdo</p>
+              <span class="menu-item__price">14.9€</span>
+            </article>
+
+            <p class="menu__panel-note" data-i18n="menu.soup.note">SOPA incluye banchan y arroz · 찌개에는 밥과 반찬 함께 드립니다</p>
+
+          </div>
+        </div>
+
+        <!-- Panel: Side & Postre -->
+        <div id="panel-side" role="tabpanel" aria-labelledby="tab-side" class="menu__panel--hidden">
+          <div class="menu__grid stagger-group">
+
+            <p class="menu__subcat" data-i18n="menu.cat.sides">Side — Acompañamientos</p>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name" data-i18n="menu.side.anchoa.name">Anchoa</h3>
+                <span class="menu-item__korean" data-i18n="menu.side.anchoa.kr">앤초비무침</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.side.anchoa.desc">Anchoa picada con salsa coreana muchim</p>
+              <span class="menu-item__price">3.0€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name" data-i18n="menu.side.jumukbap.name">Jumuk Bap</h3>
+                <span class="menu-item__korean" data-i18n="menu.side.jumukbap.kr">주먹밥</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.side.jumukbap.desc">Arroz con alga y danmuji (nabo encurtido)</p>
+              <span class="menu-item__price">5.5€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name" data-i18n="menu.side.arroz.name">Arroz Blanco</h3>
+                <span class="menu-item__korean" data-i18n="menu.side.arroz.kr">밥</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.side.arroz.desc">Arroz al vapor</p>
+              <span class="menu-item__price">2.0€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name" data-i18n="menu.side.bandeja.name">Bandeja Banchan &amp; Ssam</h3>
+                <span class="menu-item__korean" data-i18n="menu.side.bandeja.kr">쟁반 가득 반찬</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.side.bandeja.desc">Gran bandeja de banchan y ssam</p>
+              <span class="menu-item__price">5.0€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name" data-i18n="menu.side.extrabanchan.name">Extra Banchan</h3>
+                <span class="menu-item__korean" data-i18n="menu.side.extrabanchan.kr">추가 반찬(접시당)</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.side.extrabanchan.desc">Plato extra de banchan</p>
+              <span class="menu-item__price">0.5€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name" data-i18n="menu.side.lechuga.name">Extra Lechuga</h3>
+                <span class="menu-item__korean" data-i18n="menu.side.lechuga.kr">추가 상추</span>
+              </div>
+              <p class="menu-item__desc" data-i18n="menu.side.lechuga.desc">Lechuga extra para ssam</p>
+              <span class="menu-item__price">0.5€</span>
+            </article>
+
+            <p class="menu__subcat" data-i18n="menu.cat.postre">Postre</p>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name" data-i18n="menu.pos.brownie.name">Brownie Love</h3>
+                <span class="menu-item__korean" data-i18n="menu.pos.brownie.kr">브라우니 러브</span>
+              </div>
+              <span class="menu-item__price">6.5€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name" data-i18n="menu.pos.matcha.name">Matcha Cheese Cake</h3>
+                <span class="menu-item__korean" data-i18n="menu.pos.matcha.kr">미차 치즈케이크</span>
+              </div>
+              <span class="menu-item__price">6.0€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name" data-i18n="menu.pos.mango.name">Mango Fantasia</h3>
+                <span class="menu-item__korean" data-i18n="menu.pos.mango.kr">망고 판타지아</span>
+              </div>
+              <span class="menu-item__price">6.0€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name" data-i18n="menu.pos.chocopie.name">Chocopie</h3>
+                <span class="menu-item__korean" data-i18n="menu.pos.chocopie.kr">따뜻한 초코파이</span>
+              </div>
+              <span class="menu-item__price">4.5€</span>
+            </article>
+
+            <p class="menu__panel-note" data-i18n="menu.side.allergen">Diríjase a nuestro personal para información sobre alérgenos</p>
+
+          </div>
+        </div>
+
+        <!-- Panel: Korean Sul -->
+        <div id="panel-sul" role="tabpanel" aria-labelledby="tab-sul" class="menu__panel--hidden">
+          <p class="menu__cat-label" data-i18n="menu.cat.sul">주류 · Korean Sul</p>
+          <div class="menu__grid stagger-group">
+
+            <p class="menu__subcat">소주 SOJU</p>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name">참이슬 후레쉬</h3>
+                <span class="menu-item__korean">Chamisul Fresh · 16.5%</span>
+              </div>
+              <span class="menu-item__price">13.9€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name">처음처럼</h3>
+                <span class="menu-item__korean">Chum Churum · 16.5%</span>
+              </div>
+              <span class="menu-item__price">13.9€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name">새로</h3>
+                <span class="menu-item__korean">Saero · Zero Sugar · 16%</span>
+              </div>
+              <span class="menu-item__price">14.9€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name">진로이즈백</h3>
+                <span class="menu-item__korean">Jinro Is Back · 16.5%</span>
+              </div>
+              <span class="menu-item__price">14.9€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name">한라산</h3>
+                <span class="menu-item__korean">Hallasan · 17% · Soju de Jeju</span>
+              </div>
+              <span class="menu-item__price">14.9€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name">참이슬 클래식</h3>
+                <span class="menu-item__korean">Chamisul Classic · 20.1%</span>
+              </div>
+              <span class="menu-item__price">14.9€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name">과일 소주</h3>
+                <span class="menu-item__korean" data-i18n="menu.sul.soju7.detail">Soju de fruta — pomelo, uva, yuzu, melocotón, arándano</span>
+              </div>
+              <span class="menu-item__price">14.9€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name">화요25</h3>
+                <span class="menu-item__korean" data-i18n="menu.sul.soju8.detail">Hwayo · 25% · 100% Arroz orgánico</span>
+              </div>
+              <span class="menu-item__price">33.0€</span>
+            </article>
+
+            <p class="menu__subcat">한국맥주 CERVEZA COREANA</p>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name">카스</h3>
+                <span class="menu-item__korean">Cass · 4.5%</span>
+              </div>
+              <span class="menu-item__price">3.7€</span>
+            </article>
+
+            <p class="menu__subcat" data-i18n="menu.sul.cat.somek">소맥 SOMEK · Soju + Cerveza</p>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name">소주 2잔 + Cass 1병</h3>
+                <span class="menu-item__korean" data-i18n="menu.sul.somek1.detail">2 chupitos soju + 1 Cass</span>
+              </div>
+              <span class="menu-item__price">8.9€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name">소주 1병 + Cass 2병</h3>
+                <span class="menu-item__korean" data-i18n="menu.sul.somek2.detail">1 botella soju + 2 Cass</span>
+              </div>
+              <span class="menu-item__price">19.9€</span>
+            </article>
+
+            <p class="menu__subcat" data-i18n="menu.sul.cat.makkoli">막걸리 MAKKOLI · Arroz fermentado</p>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name">국순당</h3>
+                <span class="menu-item__korean">Guksundang · 6%</span>
+              </div>
+              <span class="menu-item__price">copa 4.5€ / 750ml 13.9€</span>
+            </article>
+
+            <p class="menu__subcat" data-i18n="menu.sul.cat.trad">전통주 TRADICIONAL</p>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name">청하</h3>
+                <span class="menu-item__korean" data-i18n="menu.sul.trad1.detail">Arroz fermentado y filtrado · 13% · 300ml</span>
+              </div>
+              <span class="menu-item__price">13.9€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name">매화수</h3>
+                <span class="menu-item__korean" data-i18n="menu.sul.trad2.detail">Vino de Maesil · Ciruela coreana · 14% · 300ml</span>
+              </div>
+              <span class="menu-item__price">13.9€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name">복분자</h3>
+                <span class="menu-item__korean" data-i18n="menu.sul.trad3.detail">Vino Frambuesa Negra · 13% · 375ml</span>
+              </div>
+              <span class="menu-item__price">22.0€</span>
+            </article>
+
+            <p class="menu__subcat" data-i18n="menu.sul.cat.cocktail">한국칵테일 CÓCTEL COREANO</p>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name">소주토닉</h3>
+                <span class="menu-item__korean">Soju Tonic</span>
+              </div>
+              <span class="menu-item__price">7.0€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name">쏘베리브리즈</h3>
+                <span class="menu-item__korean">Sol Berry Breeze</span>
+              </div>
+              <span class="menu-item__price">7.0€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name">하이볼</h3>
+                <span class="menu-item__korean">High Ball</span>
+              </div>
+              <span class="menu-item__price">7.0€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name">망고 막걸리 쉐이크</h3>
+                <span class="menu-item__korean">Mango Makkoli Shake · 1l</span>
+              </div>
+              <span class="menu-item__price">16.9€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name">파인애플 막걸리 쉐이크</h3>
+                <span class="menu-item__korean" data-i18n="menu.sul.ck5.detail">Piña Makkoli Shake · 1l</span>
+              </div>
+              <span class="menu-item__price">16.9€</span>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- Panel: Wine -->
+        <div id="panel-wine" role="tabpanel" aria-labelledby="tab-wine" class="menu__panel--hidden">
+          <p class="menu__cat-label" data-i18n="menu.cat.wine">Wine / Vino</p>
+          <p class="menu__wine-subtitle" data-i18n="menu.wine.subtitle">Vinos seleccionados para maridar con la cocina coreana</p>
+          <div class="menu__grid stagger-group">
+
+            <p class="menu__subcat" data-i18n="menu.wine.cat.blanco">화이트 BLANCO</p>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name">Bastets Blanc de Blanc</h3>
+                <span class="menu-item__korean">D.O. Conca de Barberà · Macabeo, Parellada</span>
+              </div>
+              <span class="menu-item__price">copa 3.5€ / botella 14.0€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name">Nogara</h3>
+                <span class="menu-item__korean">D.O. Rueda · Verdejo</span>
+              </div>
+              <span class="menu-item__price">18.0€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name">Cent x Cent</h3>
+                <span class="menu-item__korean">D.O. Terra Alta · Garnacha Blanca</span>
+              </div>
+              <span class="menu-item__price">24.0€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name">Casa de Outeiro</h3>
+                <span class="menu-item__korean">D.O. Ribeira Sacra · Godello</span>
+              </div>
+              <span class="menu-item__price">26.0€</span>
+            </article>
+
+            <p class="menu__subcat" data-i18n="menu.wine.cat.tinto">레드 TINTO</p>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name">Bastets Tinto Selección</h3>
+                <span class="menu-item__korean">D.O. Conca de Barberà · Ull de Llebre, Cab. Sauv., Parellada</span>
+              </div>
+              <span class="menu-item__price">copa 3.8€ / botella 15.0€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name">Pago de Valdoneje</h3>
+                <span class="menu-item__korean">D.O. Bierzo · Mencía</span>
+              </div>
+              <span class="menu-item__price">17.0€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name">Finca Santa María</h3>
+                <span class="menu-item__korean">D.O. Ribera del Duero · Tinta Fina, Cab. Sauv., Merlot</span>
+              </div>
+              <span class="menu-item__price">20.0€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name">La Clave</h3>
+                <span class="menu-item__korean">D.O. Bierzo · Mencía, Syrah, Tempranillo</span>
+              </div>
+              <span class="menu-item__price">23.0€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name">El Mentider</h3>
+                <span class="menu-item__korean">D.O. Conca de Barberà · Trepat</span>
+              </div>
+              <span class="menu-item__price">29.0€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name">Furvus</h3>
+                <span class="menu-item__korean">D.O. Montsant · Garnacha Peluda, Merlot</span>
+              </div>
+              <span class="menu-item__price">35.0€</span>
+            </article>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name">Figuero 12</h3>
+                <span class="menu-item__korean">D.O. Ribera del Duero · Tempranillo</span>
+              </div>
+              <span class="menu-item__price">37.0€</span>
+            </article>
+
+            <p class="menu__subcat" data-i18n="menu.wine.cat.espumoso">스파클링 ESPUMOSO</p>
+
+            <article class="menu-item reveal">
+              <div class="menu-item__names">
+                <h3 class="menu-item__name">Efecte Brut Reserva</h3>
+                <span class="menu-item__korean">D.O. Penedès · Xarel·lo, Chardonnay, Macabeo, Parellada</span>
+              </div>
+              <span class="menu-item__price">24.0€</span>
+            </article>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         GALLERY
+    ═══════════════════════════════════════════════════════ -->
+    <section id="gallery" class="section section--alt">
+      <div class="container">
+
+        <div class="gallery__header">
+          <div>
+            <span class="section-label reveal" data-i18n="gallery.label">Galería</span>
+            <h2 class="gallery__heading reveal--heading" data-i18n="gallery.heading">Una mirada a Seoul Nadri</h2>
+          </div>
+          <a href="https://www.instagram.com/nadri_barcelona/" target="_blank" rel="noopener"
+             class="gallery__ig-link reveal" aria-label="Seguir a @nadri_barcelona en Instagram"
+             data-i18n-aria="gallery.ig.aria">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+            <span data-i18n="gallery.ig.cta">Seguir en Instagram</span>
+          </a>
+        </div>
+
+        <div class="gallery__grid stagger-group">
+          <div class="gallery-item reveal">
+            <picture>
+              <source srcset="images/food1.webp" type="image/webp">
+              <img src="images/food1.jpg" alt="Plato de comida coreana" loading="lazy" decoding="async" width="800" height="600">
+            </picture>
+          </div>
+          <div class="gallery-item reveal">
+            <picture>
+              <source srcset="images/food2.webp" type="image/webp">
+              <img src="images/food2.jpg" alt="Parrilla coreana con carnes a la brasa" loading="lazy" decoding="async" width="600" height="600">
+            </picture>
+          </div>
+          <div class="gallery-item reveal">
+            <picture>
+              <source srcset="images/interior2.webp" type="image/webp">
+              <img src="images/interior2.jpg" alt="Interior del restaurante Seoul Nadri" loading="lazy" decoding="async" width="800" height="600">
+            </picture>
+          </div>
+          <div class="gallery-item reveal">
+            <picture>
+              <source srcset="images/food4.webp" type="image/webp">
+              <img src="images/food4.jpg" alt="Banchan — platos pequeños coreanos" loading="lazy" decoding="async" width="800" height="600">
+            </picture>
+          </div>
+          <div class="gallery-item reveal">
+            <picture>
+              <source srcset="images/drink2.webp" type="image/webp">
+              <img src="images/drink2.jpg" alt="Bebidas coreanas — soju y makkoli" loading="lazy" decoding="async" width="800" height="600">
+            </picture>
+          </div>
+          <div class="gallery-item reveal">
+            <picture>
+              <source srcset="images/food5.webp" type="image/webp">
+              <img src="images/food5.jpg" alt="Bibimbap en cuenco de piedra caliente" loading="lazy" decoding="async" width="800" height="600">
+            </picture>
+          </div>
+          <div class="gallery-item reveal">
+            <picture>
+              <source srcset="images/food6.webp" type="image/webp">
+              <img src="images/food6.jpg" alt="Kimchi jjigae — estofado de kimchi" loading="lazy" decoding="async" width="800" height="600">
+            </picture>
+          </div>
+          <div class="gallery-item reveal">
+            <picture>
+              <source srcset="images/interior3.webp" type="image/webp">
+              <img src="images/interior3.jpg" alt="Mesa con parrilla de carbón preparada" loading="lazy" decoding="async" width="800" height="600">
+            </picture>
+          </div>
+          <div class="gallery-item reveal">
+            <picture>
+              <source srcset="images/drink3.webp" type="image/webp">
+              <img src="images/drink3.jpg" alt="Botellas de soju coreano y cerveza Cass en Seoul Nadri" loading="lazy" decoding="async" width="800" height="600">
+            </picture>
+          </div>
+          <div class="gallery-item reveal">
+            <picture>
+              <source srcset="images/drink4.webp" type="image/webp">
+              <img src="images/drink4.jpg" alt="Makkoli — vino de arroz fermentado servido en Seoul Nadri Barcelona" loading="lazy" decoding="async" width="800" height="600">
+            </picture>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         REVIEWS
+    ═══════════════════════════════════════════════════════ -->
+    <section id="reviews" class="section">
+      <div class="container">
+
+        <div class="reviews__header">
+          <div>
+            <span class="section-label reveal" data-i18n="reviews.label">Reseñas</span>
+            <h2 class="reviews__heading reveal--heading" data-i18n="reviews.heading">Lo que dicen nuestros clientes</h2>
+          </div>
+          <div class="reviews__score-wrap reveal">
+            <span class="reviews__score-num" role="img" aria-label="4.7 de 5 estrellas" data-i18n-aria="reviews.score.aria">4.7</span>
+            <div class="reviews__score-detail">
+              <div class="reviews__stars" aria-hidden="true">★★★★★</div>
+              <span class="reviews__count" data-i18n="reviews.count">Google Reviews</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="reviews__grid stagger-group">
+
+          <article class="review-card reveal">
+            <div class="review-card__stars" role="img" aria-label="5 de 5 estrellas" data-i18n-aria="reviews.stars.aria">★★★★★</div>
+            <p class="review-card__text" data-i18n="review.1.text">El mejor Korean BBQ de Barcelona. Las carnes son increíbles y el banchan que viene con todo es generosísimo. Reservad con antelación, siempre está lleno.</p>
+            <div class="review-card__footer">
+              <span class="review-card__name" data-i18n="review.1.name">Ana M.</span>
+              <span class="review-card__source">Google</span>
+            </div>
+          </article>
+
+          <article class="review-card reveal">
+            <div class="review-card__stars" role="img" aria-label="5 de 5 estrellas" data-i18n-aria="reviews.stars.aria">★★★★★</div>
+            <p class="review-card__text" data-i18n="review.2.text">Absolutely incredible. The kimchi jjigae and the marinated chicken were outstanding. Staff super helpful even in English. A must in Barcelona.</p>
+            <div class="review-card__footer">
+              <span class="review-card__name" data-i18n="review.2.name">Sarah K.</span>
+              <span class="review-card__source">Google</span>
+            </div>
+          </article>
+
+          <article class="review-card reveal">
+            <div class="review-card__stars" role="img" aria-label="5 de 5 estrellas" data-i18n-aria="reviews.stars.aria">★★★★★</div>
+            <p class="review-card__text" data-i18n="review.3.text">El lloc perfecte per a una nit especial. El bulgogi i els fideus de vidre eren excepcionals. Ambient animat, com si estiguessis a Seül.</p>
+            <div class="review-card__footer">
+              <span class="review-card__name" data-i18n="review.3.name">Jordi P.</span>
+              <span class="review-card__source">Google</span>
+            </div>
+          </article>
+
+          <article class="review-card reveal">
+            <div class="review-card__stars" role="img" aria-label="5 de 5 estrellas" data-i18n-aria="reviews.stars.aria">★★★★★</div>
+            <p class="review-card__text" data-i18n="review.4.text">Vinimos sin reserva y nos acomodaron igual. El pollo frito coreano y el bibimbap en piedra, espectaculares. Ya somos clientes fijos.</p>
+            <div class="review-card__footer">
+              <span class="review-card__name" data-i18n="review.4.name">Carlos R.</span>
+              <span class="review-card__source">Google</span>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="reviews__ctas reveal">
+          <a href="https://www.google.com/maps/place/SEOUL+NADRI+%EC%84%9C%EC%9A%B8%EB%82%98%EB%93%A4%EC%9D%B4/@41.3908578,2.1718725,19z/data=!4m8!3m7!1s0x12a4a339fa4c6cc1:0x9874f5960c90b07f!8m2!3d41.3909988!4d2.1720999!9m1!1b1!16s%2Fg%2F11kj4cc8jw?authuser=0&entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D"
+             target="_blank" rel="noopener noreferrer" class="btn btn--primary" data-i18n="reviews.link">Ver en Google Maps</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         FIND US
+    ═══════════════════════════════════════════════════════ -->
+    <section id="find-us" class="section section--alt">
+      <div class="container">
+
+        <div class="findus__grid">
+
+          <!-- Info column -->
+          <div>
+            <span class="section-label reveal" data-i18n="findus.label">Encuéntranos</span>
+            <span class="gold-rule reveal delay-80"></span>
+            <h2 class="findus__heading reveal--heading" data-i18n="findus.heading">Visítanos en Barcelona</h2>
+
+            <!-- Address -->
+            <div class="findus__address reveal">
+              <span class="findus__address-label" data-i18n="findus.addr.label">Dirección</span>
+              <address>
+                <span data-i18n="findus.addr.street">Carrer de Roger de Llúria, 24</span><br>
+                <span data-i18n="findus.addr.city">08010 Barcelona, España</span>
+              </address>
+            </div>
+
+            <!-- Hours -->
+            <div class="findus__hours reveal delay-80">
+              <span class="findus__hours-label" data-i18n="findus.hours.label">Horario</span>
+              <dl class="hours-table">
+                <dt data-i18n="findus.hours.days">Miércoles – Domingo</dt>
+                <dd>
+                  <span data-i18n="findus.hours.lunch">13:00 – 16:30</span>
+                  &nbsp;·&nbsp;
+                  <span data-i18n="findus.hours.dinner">19:30 – 23:30</span>
+                </dd>
+                <dt data-i18n="findus.hours.closed">Lunes – Martes</dt>
+                <dd class="hours-closed" data-i18n="findus.hours.closed.val">Cerrado</dd>
+              </dl>
+            </div>
+
+            <!-- WhatsApp card -->
+            <div class="whatsapp-card reveal delay-160">
+              <span class="whatsapp-card__label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                <span data-i18n="findus.wa.label">WhatsApp</span>
+              </span>
+              <h3 class="whatsapp-card__heading" data-i18n="findus.wa.heading">Reserva por WhatsApp</h3>
+              <p class="whatsapp-card__desc" data-i18n="findus.wa.desc">WhatsApp es nuestra forma principal de gestionar reservas. Escríbenos y te confirmamos en menos de 2 horas durante el horario de apertura.</p>
+              <a id="whatsapp-find-us"
+                 href="https://wa.me/34611895013?text=Hola%2C%20me%20gustar%C3%ADa%20hacer%20una%20reserva%20en%20Seoul%20Nadri."
+                 data-phone="+34611895013"
+                 target="_blank" rel="noopener"
+                 class="btn btn--gold btn--full"
+                 data-i18n="findus.wa.cta">Enviar mensaje</a>
+            </div>
+          </div>
+
+          <!-- Map column -->
+          <div class="reveal--scale delay-200">
+            <div class="findus__map">
+              <iframe
+                src="https://maps.google.com/maps?q=41.3908578,2.1718725&z=17&output=embed"
+                title="Seoul Nadri en Google Maps"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                aria-label="Mapa de Google con la ubicación de Seoul Nadri" data-i18n-aria="findus.aria.map">
+              </iframe>
+            </div>
+            <a href="https://www.google.com/maps/place/SEOUL+NADRI+%EC%84%9C%EC%9A%B8%EB%82%98%EB%93%A4%EC%9D%B4/@41.3908578,2.1718725,19z/data=!4m16!1m9!3m8!1s0x12a4a339fa4c6cc1:0x9874f5960c90b07f!2zU0VPVUwgTkFEUkkg7ISc7Jq464KY65Ok7J20!8m2!3d41.3909988!4d2.1720999!9m1!1b1!16s%2Fg%2F11kj4cc8jw!3m5!1s0x12a4a339fa4c6cc1:0x9874f5960c90b07f!8m2!3d41.3909988!4d2.1720999!16s%2Fg%2F11kj4cc8jw?authuser=0&entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D"
+               target="_blank" rel="noopener noreferrer"
+               class="findus__map-link"
+               data-i18n="findus.maps.link">
+              Abrir en Google Maps
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+
+      <!-- Brand statement -->
+      <div class="footer__brand-statement">
+        <p class="footer__logo">SEOUL NADRI</p>
+        <p class="footer__logo-kr">서울나들이</p>
+      </div>
+
+      <!-- Nav row -->
+      <nav class="footer__nav" aria-label="Navegación del pie de página" data-i18n-aria="nav.aria.footer">
+        <a href="#about"   data-i18n="nav.about">Nosotros</a>
+        <span class="footer__nav-dot" aria-hidden="true">·</span>
+        <a href="#bbq"     data-i18n="nav.bbq">Korean BBQ</a>
+        <span class="footer__nav-dot" aria-hidden="true">·</span>
+        <a href="#menu"    data-i18n="nav.menu">Carta</a>
+        <span class="footer__nav-dot" aria-hidden="true">·</span>
+        <a href="#gallery" data-i18n="nav.gallery">Galería</a>
+        <span class="footer__nav-dot" aria-hidden="true">·</span>
+        <a href="#reviews" data-i18n="nav.reviews">Reseñas</a>
+        <span class="footer__nav-dot" aria-hidden="true">·</span>
+        <a href="#find-us" data-i18n="nav.contact">Encuéntranos</a>
+        <span class="footer__nav-dot" aria-hidden="true">·</span>
+        <a href="privacy.html" data-i18n="footer.privacy">Política de privacidad</a>
+      </nav>
+
+      <!-- Bottom bar -->
+      <div class="footer__bottom">
+        <div class="footer__rule-bottom" aria-hidden="true"></div>
+        <div class="footer__bottom-bar">
+          <p class="footer__copy" data-i18n="footer.copy">© 2026 Seoul Nadri 서울나들이. Todos los derechos reservados.</p>
+          <div class="footer__lang" role="group" aria-label="Selector de idioma" data-i18n-aria="nav.aria.lang">
+            <button class="lang-btn" type="button" data-lang="es" aria-pressed="true">ES</button>
+            <button class="lang-btn" type="button" data-lang="ca" aria-pressed="false">CA</button>
+            <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FLOATING WHATSAPP
+  ═══════════════════════════════════════════════════════ -->
+  <a id="whatsapp-btn"
+     href="https://wa.me/34611895013?text=Hola%2C%20me%20gustar%C3%ADa%20hacer%20una%20reserva%20en%20Seoul%20Nadri."
+     data-phone="+34611895013"
+     class="whatsapp-btn"
+     target="_blank"
+     rel="noopener"
+     aria-label="Reservar por WhatsApp"
+     data-i18n-aria="a11y.whatsapp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- Back to top -->
+  <button id="back-to-top" type="button" class="back-to-top" aria-label="Volver al inicio" data-i18n-aria="a11y.back_top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
+  <!-- ═══════════════════════════════════════════════════════
+       COOKIE BANNER
+  ═══════════════════════════════════════════════════════ -->
+  <div id="cookie-banner" class="cookie-banner" hidden role="alertdialog" aria-labelledby="cookie-title" aria-modal="false">
+    <div class="container">
+      <div class="cookie-banner__inner">
+        <div class="cookie-banner__text">
+          <p id="cookie-title" data-i18n="cookie.text">Usamos cookies analíticas para entender cómo se usa el sitio y mejorar tu experiencia. Puedes elegir qué aceptas.</p>
+          <p><a href="privacy.html" data-i18n="footer.privacy">Política de privacidad</a></p>
+        </div>
+        <div class="cookie-banner__actions">
+          <button id="cookie-accept" type="button" class="btn btn--gold btn--sm" data-i18n="cookie.accept">Aceptar todo</button>
+          <button id="cookie-necessary" type="button" class="btn btn--outline btn--sm" data-i18n="cookie.necessary">Solo necesarias</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/lenis.min.js" defer></script>
+  <script src="js/i18n.js" defer></script>
+  <script src="js/main.js" defer></script>
+
+</body>
+</html>

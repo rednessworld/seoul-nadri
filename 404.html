@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 — Página no encontrada · Seoul Nadri</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <style>
+    @font-face {
+      font-family: 'HeadersFont';
+      src: url('fonts/headers_font.otf') format('opentype');
+      font-display: swap;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      background-color: #231F20;
+      color: #F0ECE4;
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .wrap {
+      text-align: center;
+      max-width: 480px;
+    }
+    .num {
+      font-family: 'HeadersFont', Georgia, serif;
+      font-size: clamp(5rem, 20vw, 9rem);
+      line-height: 1;
+      color: #9A845A;
+      letter-spacing: -0.04em;
+    }
+    .heading {
+      font-family: 'HeadersFont', Georgia, serif;
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      margin: 1rem 0 1.25rem;
+    }
+    p {
+      font-size: 1rem;
+      color: rgba(240,236,228,0.65);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0.75rem 2rem;
+      background-color: #9A845A;
+      color: #fff;
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.2s;
+    }
+    a:hover { background-color: #7A6742; }
+    .korean {
+      display: block;
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      color: #9A845A;
+      margin-top: 0.5rem;
+    }
+    .body-text { margin-top: 1.25rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="num">404</p>
+    <h1 class="heading">Página no encontrada</h1>
+    <span class="korean">페이지를 찾을 수 없습니다</span>
+    <p class="body-text">Esta página no existe. Quizás fue movida o eliminada. Vuelve al inicio y disfruta de la carta.</p>
+    <a href="/">Volver al inicio</a>
+  </div>
+</body>
+</html>

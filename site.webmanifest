@@ -1,0 +1,21 @@
+{
+  "name": "Seoul Nadri 서울나들이",
+  "short_name": "Seoul Nadri",
+  "description": "Auténtico Korean BBQ en el Eixample de Barcelona. Parrilla de carbón, banchan artesanal y platos clásicos coreanos.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#231F20",
+  "theme_color": "#231F20",
+  "icons": [
+    {
+      "src": "images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

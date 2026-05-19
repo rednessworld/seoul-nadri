@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SEOUL NADRI | 서울나들이 - Barcelona</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#dadada",
+                        "secondary-fixed": "#fadfaf",
+                        "on-primary-container": "#6c6a64",
+                        "secondary-fixed-dim": "#ddc395",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#f7dcac",
+                        "on-primary-fixed-variant": "#484741",
+                        "surface-bright": "#f9f9f9",
+                        "primary-fixed": "#e6e2da",
+                        "inverse-primary": "#cac6bf",
+                        "primary": "#605e58",
+                        "on-primary-fixed": "#1c1c17",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#f0f1f1",
+                        "secondary": "#6f5c35",
+                        "on-secondary-fixed": "#261900",
+                        "error": "#ba1a1a",
+                        "background": "#f9f9f9",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-secondary-container": "#746039",
+                        "on-secondary-fixed-variant": "#564420",
+                        "tertiary-fixed-dim": "#cdc4c5",
+                        "outline": "#79776f",
+                        "primary-fixed-dim": "#cac6bf",
+                        "surface-container-low": "#f3f3f4",
+                        "on-tertiary-fixed-variant": "#4b4546",
+                        "slate-charcoal": "#231F20",
+                        "surface-container-high": "#e8e8e8",
+                        "surface-tint": "#605e58",
+                        "hanji-cream": "#F0ECE4",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#635d5e",
+                        "on-background": "#1a1c1c",
+                        "surface": "#f9f9f9",
+                        "soft-greige": "#D9D2C5",
+                        "surface-container-highest": "#e2e2e2",
+                        "surface-container": "#eeeeee",
+                        "primary-container": "#f0ece4",
+                        "tertiary-container": "#f3eaeb",
+                        "outline-variant": "#cac6bd",
+                        "surface-variant": "#e2e2e2",
+                        "brasserie-gold": "#9A845A",
+                        "on-surface-variant": "#484740",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#1a1c1c",
+                        "inverse-surface": "#2f3131",
+                        "on-tertiary-fixed": "#1e1b1c",
+                        "tertiary-fixed": "#e9e0e1",
+                        "on-tertiary-container": "#6f696a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "24px",
+                        "stack-sm": "12px",
+                        "gutter": "24px",
+                        "stack-xl": "96px",
+                        "stack-md": "24px",
+                        "stack-lg": "48px",
+                        "margin-desktop": "80px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Plus Jakarta Sans"],
+                        "headline-xl": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Playfair Display"],
+                        "body-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-hanji-cream text-slate-charcoal antialiased selection:bg-brasserie-gold selection:text-white">
+<!-- TopNavBar -->
+<nav class="docked full-width top-0 sticky backdrop-blur-xl border-b border-soft-greige/30 z-50 bg-hanji-cream/80">
+<div class="flex justify-between items-center w-full px-margin-desktop py-6 max-w-[1280px] mx-auto z-50">
+<!-- Brand Logo -->
+<a class="font-headline-md text-headline-md tracking-tighter text-slate-charcoal" href="#">SEOUL NADRI | 서울나들이</a>
+<!-- Navigation Links -->
+<div class="hidden md:flex space-x-gutter items-center">
+<a class="font-label-caps text-label-caps text-slate-charcoal border-b border-brasserie-gold pb-1 cursor-pointer transition-all duration-300 ease-in-out" href="#home">Home</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-slate-charcoal transition-colors hover:opacity-70 transition-opacity duration-300 cursor-pointer" href="#spirit">The Spirit</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-slate-charcoal transition-colors hover:opacity-70 transition-opacity duration-300 cursor-pointer" href="#menus">Menus &amp; Cards</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-slate-charcoal transition-colors hover:opacity-70 transition-opacity duration-300 cursor-pointer" href="#photos">Photos</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-slate-charcoal transition-colors hover:opacity-70 transition-opacity duration-300 cursor-pointer" href="#reservation">Contact &amp; Reservation</a>
+</div>
+<!-- Mobile Menu Icon (Placeholder for interaction) -->
+<div class="md:hidden">
+<span class="material-symbols-outlined cursor-pointer hover:opacity-70 transition-opacity text-slate-charcoal" data-icon="menu">menu</span>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main>
+<!-- Hero Section ("The Spirit") -->
+<section class="relative w-full h-[819px] min-h-[600px] flex items-center justify-center bg-slate-charcoal overflow-hidden" id="home">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0">
+<img alt="Hero background" class="w-full h-full object-cover opacity-60 mix-blend-overlay" data-alt="A wide panoramic shot of an elegant, dimly lit restaurant interior. The scene combines traditional Korean architectural elements like dark charred wood beams with polished brass accents and sophisticated European brasserie styling. Tables are meticulously set with white linen and modern dinnerware. Soft, warm ambient lighting creates a premium, intimate, and inviting atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDznbncpVCh18RI6zuwslcYDJQufZRik3fmjSS08-PxlIr73OlJ7FAAUkmF1JfUpUoJcOkUkQuoow57vRILvprDWVOh6_1eSOtK5rru-A7Ks5d4bPYUABHd2PI7Frp4V8vUQ0bdip7SOP62qpxnrOivQefcku2k7KgAwwXxRKm0cdpvDQDIE3BCWQTWCWARWEO07Y4M3yKpaLGPSJVgIngQ7NaKk7xkb5ICa_XeLRSJH5UGqmknnLKKQqYuHPL3cbRl-0wza6XIbnY"/>
+</div>
+<!-- Content -->
+<div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-4xl mx-auto flex flex-col items-center gap-stack-lg">
+<h1 class="font-headline-xl text-headline-xl text-hanji-cream">The Art of Traditional Korean Cuisine in the Heart of Barcelona</h1>
+<a class="inline-block bg-slate-charcoal text-white font-label-caps text-label-caps py-4 px-8 border border-soft-greige hover:bg-hanji-cream hover:text-slate-charcoal transition-colors duration-300 tracking-widest uppercase" href="#reservation">Book a Table</a>
+</div>
+</section>
+<!-- Atmosphere & Heritage Rows -->
+<section class="py-stack-xl px-margin-mobile md:px-margin-desktop max-w-[1280px] mx-auto" id="spirit">
+<!-- Row 1: Dolsot Bibimbap (Left Text / Right Image) -->
+<div class="flex flex-col md:flex-row items-center gap-stack-xl mb-stack-xl">
+<div class="w-full md:w-1/2 flex flex-col gap-stack-md pr-0 md:pr-gutter">
+<span class="font-label-caps text-label-caps text-brasserie-gold tracking-widest">TRADITION</span>
+<h2 class="font-headline-lg text-headline-lg text-slate-charcoal">The Sizzle of Dolsot</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Experience the authentic heat of a traditional stone bowl. Our Dolsot Bibimbap is a symphony of textures, featuring perfectly crisped rice, vibrant seasonal vegetables, and a deep, savory gochujang sauce that melds together at the table.</p>
+</div>
+<div class="w-full md:w-1/2 h-[500px]">
+<img alt="Dolsot Bibimbap" class="w-full h-full object-cover grayscale-[20%]" data-alt="A close-up, high-quality editorial shot of a steaming Dolsot Bibimbap served in a heavy, dark grey traditional stone bowl. The dish is vividly colorful with arranged fresh vegetables, a raw egg yolk in the center, and perfectly crisped rice edges. Placed on a minimalist dark wood table in a sophisticated restaurant setting. Soft directional lighting highlights the steam rising from the bowl." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ7llTLspEazYuQNJa3lJchH8oKyuwtivqLzuxsbNkbVYRc4JKInjAPdAZTJtgrFJ_zztBHiJXFNt9Fn63pdrrw3pnBxlCWqWrAe0jrClYFpjr5R3gk70q3UTuS1HTYy58Cq_rnD94HlpLPBqEQ3ua_EAU4EvfyiR0REg0hQC8PZWKNtY9P37EebTD2Lim4FiqxMpNSYPlosISTx33H7dAVmEKSTLHs1NXX9TLRFhBP6ChordZOQuuQbl4crOFqj3NoURJhSAWCO0"/>
+</div>
+</div>
+<!-- Row 2: Traditional Grills (Right Text / Left Image) -->
+<div class="flex flex-col md:flex-row-reverse items-center gap-stack-xl mb-stack-xl">
+<div class="w-full md:w-1/2 flex flex-col gap-stack-md pl-0 md:pl-gutter">
+<span class="font-label-caps text-label-caps text-brasserie-gold tracking-widest">FIRE</span>
+<h2 class="font-headline-lg text-headline-lg text-slate-charcoal">Mastery of the Grill</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Premium cuts of Wagyu and Iberico pork, marinated in our secret blend of soy, pear, and sesame. Cooked to perfection at your table, honoring the convivial spirit of Korean dining where food is a shared, interactive experience.</p>
+</div>
+<div class="w-full md:w-1/2 h-[500px]">
+<img alt="Korean BBQ Grill" class="w-full h-full object-cover grayscale-[20%]" data-alt="An elegant, dimly lit photograph of premium marbled meat searing on a built-in brass tabletop grill. Flames gently lick the edges of the high-quality cuts. The surrounding table features small, exquisite ceramic side dishes (banchan). The scene conveys warmth, luxury, and the interactive nature of high-end Korean barbecue. Warm golden lighting reflects off the brass elements." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN2Szi5PiJQJWt9F4I6y_Xn9FqLWXS8Bd4QS_dyu5si3rQN2VIkX-Tl-d8WtR35WYk3hMuRwge2qJbbohP_gM2_MfGNi5IyEU9oiN8F9ZEZymM-I3ow7iLjCE1Buy26qkD5sBBvhIrgXSAtu4i6nFBtfVVO2DcESyaEsMWxPICuazIgVlPFdk8RmDxGyUFPEbjvNSZvYK6mhR_2744RNCR9aOWX635yjNsx6dauXtnOpTQIYt2jveS2mDALnktOYyv9povtW_xGE4"/>
+</div>
+</div>
+<!-- Row 3: Homemade Kimchi (Left Text / Right Image) -->
+<div class="flex flex-col md:flex-row items-center gap-stack-xl">
+<div class="w-full md:w-1/2 flex flex-col gap-stack-md pr-0 md:pr-gutter">
+<span class="font-label-caps text-label-caps text-brasserie-gold tracking-widest">FERMENTATION</span>
+<h2 class="font-headline-lg text-headline-lg text-slate-charcoal">The Time of Kimchi</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Fermentation is the soul of our kitchen. Our kimchi is crafted in-house using recipes passed down through generations, patiently aged to develop complex, umami-rich flavors that balance every meal.</p>
+</div>
+<div class="w-full md:w-1/2 h-[500px]">
+<img alt="Homemade Kimchi" class="w-full h-full object-cover grayscale-[20%]" data-alt="A moody, tactile image of traditional Korean Onggi (earthenware fermentation crocks) resting in a serene, minimalist setting. In the foreground, a pristine white plate holds a vibrant, perfectly arranged serving of red, spicy cabbage kimchi. The lighting is soft and natural, emphasizing the rich textures of the ceramic and the vivid colors of the fermented vegetables." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5ENaoo0YAM2x_AiguVllhZvtL2rlkGazLn9m2AuAIq-Nvc9gsrutRHj5isN8AcjdZASk25_wsAwENI9IlrTvJESqzEpXIG6MnQvLcjgXueVzrjX1gBL-l5HHia-E3aufepbgHgtCrxnIgTtPfbmtaiK1dPyaR5_eNlWHkb4N8OU3kbXMN1voPCpAKVUQ8Ucx3M1mL2jB5ltNWjhckAvbRs6dUSPKu-kNICtb7UQ1wOO5HzjmNIOBQNkrhPTUugJXD09Wb5o2zI1o"/>
+</div>
+</div>
+</section>
+<!-- Divider -->
+<div class="w-full flex justify-center py-stack-md">
+<div class="w-24 border-t border-brasserie-gold"></div>
+</div>
+<!-- Menus & Cards Section -->
+<section class="py-stack-xl px-margin-mobile md:px-margin-desktop max-w-[1280px] mx-auto" id="menus">
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-xl text-headline-xl text-slate-charcoal mb-stack-sm">Our Menus</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">A curated selection reflecting the harmony of Korean heritage and contemporary refinement.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Menu Card 1 -->
+<div class="bg-surface-container-lowest border border-soft-greige p-stack-md flex flex-col gap-stack-md h-full">
+<h3 class="font-headline-md text-headline-md text-slate-charcoal text-center border-b border-soft-greige pb-4">From the Grill</h3>
+<ul class="flex flex-col gap-4 font-body-md text-body-md text-on-surface-variant mt-4">
+<li class="flex justify-between items-baseline">
+<span>Wagyu Ribeye (A5)</span>
+<span class="text-brasserie-gold font-label-caps text-label-caps">€75</span>
+</li>
+<li class="flex justify-between items-baseline">
+<span>Iberico Pork Belly</span>
+<span class="text-brasserie-gold font-label-caps text-label-caps">€38</span>
+</li>
+<li class="flex justify-between items-baseline">
+<span>Marinated Galbi</span>
+<span class="text-brasserie-gold font-label-caps text-label-caps">€45</span>
+</li>
+</ul>
+</div>
+<!-- Menu Card 2 -->
+<div class="bg-surface-container-lowest border border-soft-greige p-stack-md flex flex-col gap-stack-md h-full">
+<h3 class="font-headline-md text-headline-md text-slate-charcoal text-center border-b border-soft-greige pb-4">Traditional Classics</h3>
+<ul class="flex flex-col gap-4 font-body-md text-body-md text-on-surface-variant mt-4">
+<li class="flex justify-between items-baseline">
+<span>Jeonbokjuk (Abalone Porridge)</span>
+<span class="text-brasserie-gold font-label-caps text-label-caps">€32</span>
+</li>
+<li class="flex justify-between items-baseline">
+<span>Yukhoe (Beef Tartare)</span>
+<span class="text-brasserie-gold font-label-caps text-label-caps">€28</span>
+</li>
+<li class="flex justify-between items-baseline">
+<span>Haemul Pajeon (Seafood Pancake)</span>
+<span class="text-brasserie-gold font-label-caps text-label-caps">€24</span>
+</li>
+</ul>
+</div>
+<!-- Menu Card 3 -->
+<div class="bg-surface-container-lowest border border-soft-greige p-stack-md flex flex-col gap-stack-md h-full">
+<h3 class="font-headline-md text-headline-md text-slate-charcoal text-center border-b border-soft-greige pb-4">Drinks &amp; Cocktails</h3>
+<ul class="flex flex-col gap-4 font-body-md text-body-md text-on-surface-variant mt-4">
+<li class="flex justify-between items-baseline">
+<span>Premium Hwayo Soju</span>
+<span class="text-brasserie-gold font-label-caps text-label-caps">€45</span>
+</li>
+<li class="flex justify-between items-baseline">
+<span>Plum Wine Spritz</span>
+<span class="text-brasserie-gold font-label-caps text-label-caps">€16</span>
+</li>
+<li class="flex justify-between items-baseline">
+<span>Omija Tea Infusion</span>
+<span class="text-brasserie-gold font-label-caps text-label-caps">€12</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Divider -->
+<div class="w-full flex justify-center py-stack-md">
+<div class="w-24 border-t border-brasserie-gold"></div>
+</div>
+<!-- Reservation Widget Section -->
+<section class="py-stack-xl px-margin-mobile md:px-margin-desktop max-w-[1000px] mx-auto" id="reservation">
+<div class="bg-surface-container-lowest border border-soft-greige p-stack-lg md:p-stack-xl shadow-none">
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-lg text-headline-lg text-slate-charcoal mb-stack-sm">Reserve Your Table</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Join us for an unforgettable dining experience.</p>
+</div>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<!-- Date -->
+<div class="flex flex-col border-b border-soft-greige focus-within:border-slate-charcoal transition-colors">
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2">Date</label>
+<input class="bg-transparent border-none outline-none font-body-md text-body-md text-slate-charcoal py-2 focus:ring-0" type="date"/>
+</div>
+<!-- Time -->
+<div class="flex flex-col border-b border-soft-greige focus-within:border-slate-charcoal transition-colors">
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2">Time</label>
+<select class="bg-transparent border-none outline-none font-body-md text-body-md text-slate-charcoal py-2 focus:ring-0">
+<option>19:00</option>
+<option>19:30</option>
+<option>20:00</option>
+<option>20:30</option>
+<option>21:00</option>
+</select>
+</div>
+<!-- Guests -->
+<div class="flex flex-col border-b border-soft-greige focus-within:border-slate-charcoal transition-colors">
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2">Guests</label>
+<select class="bg-transparent border-none outline-none font-body-md text-body-md text-slate-charcoal py-2 focus:ring-0">
+<option>2 People</option>
+<option>3 People</option>
+<option>4 People</option>
+<option>5 People</option>
+<option>6 People</option>
+</select>
+</div>
+<!-- Name -->
+<div class="flex flex-col border-b border-soft-greige focus-within:border-slate-charcoal transition-colors">
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2">Full Name</label>
+<input class="bg-transparent border-none outline-none font-body-md text-body-md text-slate-charcoal py-2 focus:ring-0 placeholder-soft-greige" placeholder="Your Name" type="text"/>
+</div>
+<!-- Email -->
+<div class="flex flex-col border-b border-soft-greige focus-within:border-slate-charcoal transition-colors">
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2">Email</label>
+<input class="bg-transparent border-none outline-none font-body-md text-body-md text-slate-charcoal py-2 focus:ring-0 placeholder-soft-greige" placeholder="your@email.com" type="email"/>
+</div>
+<!-- Phone -->
+<div class="flex flex-col border-b border-soft-greige focus-within:border-slate-charcoal transition-colors">
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2">Phone</label>
+<input class="bg-transparent border-none outline-none font-body-md text-body-md text-slate-charcoal py-2 focus:ring-0 placeholder-soft-greige" placeholder="+34 XXX XXX XXX" type="tel"/>
+</div>
+<!-- Special Requests -->
+<div class="md:col-span-2 flex flex-col border-b border-soft-greige focus-within:border-slate-charcoal transition-colors">
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2">Special Requests</label>
+<textarea class="bg-transparent border-none outline-none font-body-md text-body-md text-slate-charcoal py-2 focus:ring-0 placeholder-soft-greige resize-none" placeholder="Allergies, occasions, etc." rows="2"></textarea>
+</div>
+<!-- Submit -->
+<div class="md:col-span-2 mt-stack-md flex justify-center">
+<button class="bg-slate-charcoal text-white font-label-caps text-label-caps py-4 px-12 hover:opacity-90 transition-opacity" type="button">CONFIRM RESERVATION</button>
+</div>
+</form>
+<!-- Notice Block -->
+<div class="mt-stack-lg border border-brasserie-gold/50 bg-hanji-cream/30 p-stack-sm text-center">
+<p class="font-label-caps text-label-caps text-brasserie-gold">Notice for Large Groups</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 text-sm">For groups larger than 15 people, please contact us directly via phone or email to arrange a private dining experience.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="full-width bottom-0 border-t border-brasserie-gold/20 bg-slate-charcoal">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-desktop py-stack-lg max-w-[1280px] mx-auto gap-stack-md md:gap-0">
+<!-- Brand Logo -->
+<div class="font-headline-md text-headline-md text-hanji-cream opacity-90 hover:opacity-100 transition-opacity">
+                SEOUL NADRI
+            </div>
+<!-- Links -->
+<div class="flex space-x-gutter">
+<a class="font-label-caps text-label-caps text-soft-greige/60 hover:text-brasserie-gold transition-colors duration-300" href="#">Location</a>
+<a class="font-label-caps text-label-caps text-soft-greige/60 hover:text-brasserie-gold transition-colors duration-300" href="#">Hours</a>
+<a class="font-label-caps text-label-caps text-soft-greige/60 hover:text-brasserie-gold transition-colors duration-300" href="#">Privacy Policy</a>
+</div>
+<!-- Copyright Text -->
+<div class="font-body-md text-body-md text-hanji-cream opacity-90">
+                © 2024 SEOUL NADRI Barcelona. All rights reserved.
+            </div>
+</div>
+</footer>
+</body></html>
